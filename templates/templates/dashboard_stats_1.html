@@ -124,28 +124,26 @@
                 </div>
             </div>
             <div class="col-lg-3 col-xs-12 col-sm-12">
-                <div style="margin: 100px 0 0 0">
-                    {% if mes1 %}
-                    <div class="note note-success">
-                        <p> {{mes1}} </p>
-                    </div>
-                    {% endif %}
-                    {% if mes2 %}
-                    <div class="note note-info">
-                        <p> {{mes2}} </p>
-                    </div>
-                    {% endif %}
-                    {% if mes3 %}
-                    <div class="note note-danger">
-                        <p> {{mes3}} </p>
-                    </div>
-                    {% endif %}
-                    {% if mes4 %}
-                    <div class="note note-warning">
-                        <p> {{mes4}} </p>
-                    </div>
-                    {% endif %}
+                {% if mes1 %}
+                <div class="note note-success">
+                    <p> {{mes1}} </p>
                 </div>
+                {% endif %}
+                {% if mes2 %}
+                <div class="note note-info">
+                    <p> {{mes2}} </p>
+                </div>
+                {% endif %}
+                {% if mes3 %}
+                <div class="note note-danger">
+                    <p> {{mes3}} </p>
+                </div>
+                {% endif %}
+                {% if mes4 %}
+                <div class="note note-warning">
+                    <p> {{mes4}} </p>
+                </div>
+                {% endif %}
             </div>
     </div>
 </div>
