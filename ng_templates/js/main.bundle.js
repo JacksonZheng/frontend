@@ -52,6 +52,7 @@ module.exports = "<nz-layout class=\"layout\">\n  <nz-header>\n    <div class=\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../../_@angular_forms@5.2.1@@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng_zorro_antd__ = __webpack_require__("../../../../_ng-zorro-antd@0.6.12@ng-zorro-antd/esm5/antd.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("../../../../_@angular_common@5.2.1@@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("../../../../_rxjs@5.5.6@rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,6 +62,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -193,10 +195,15 @@ var AppComponent = /** @class */ (function () {
             this._message.create('success', '成功添加一位用户');
         }
     };
+    AppComponent.prototype.onSearch = function () {
+        console.log('搜索');
+    };
     AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var userUrl = 'https://www.neufact.com/get_userlist';
-        this.http.get(userUrl).subscribe(function (val) {
+        this.http.get(userUrl).map(function (v) { return v.userlist; }).subscribe(function (val) {
             console.log('所有用户', val);
+            _this.data = val;
         });
         this.validateForm = this.fb.group(new __WEBPACK_IMPORTED_MODULE_1__model_user_model__["a" /* User */]());
     };
