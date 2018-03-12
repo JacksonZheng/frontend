@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% from "common.html" import title %}
+    {% from "website/common.html" import title %}
     {{title()}}
     <!-- CSS -->
     <link rel="stylesheet" href="./frontend/global/css/fonts-family.css">
@@ -27,7 +27,7 @@
   </head>
   <body>
     <!-- Top menu -->
-    {% from "common.html" import topmenu %}
+    {% from "website/common.html" import topmenu %}
     {{topmenu("/?")}}
     <!-- Top content -->
     <div class="row">
