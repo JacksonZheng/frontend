@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
     /*
         Background slideshow
     */
-    $('.testimonials-container').backstretch("../static/index/images/backgrounds/factory.jpg");
+    $('.testimonials-container').backstretch("./frontend/pages/img/backgrounds/factory.jpg");
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
         $('.testimonials-container').backstretch("resize");
