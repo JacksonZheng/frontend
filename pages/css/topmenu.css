@@ -1,0 +1,58 @@
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+.navbar {
+  margin-bottom: 0;
+  background: #272727;
+  border: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -o-transition: all .6s;
+  -moz-transition: all .6s;
+  -webkit-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+ul.navbar-nav {
+  font-size: 15px;
+  color: #fff;
+}
+
+.navbar-inverse ul.navbar-nav li a {
+  color: #fff;
+  opacity: 0.8;
+  border: 0;
+}
+
+.navbar-inverse ul.navbar-nav li a:hover {
+  color: #fff;
+  opacity: 1;
+  border: 0;
+}
+
+.navbar-inverse ul.navbar-nav li a:focus {
+  color: #fff;
+  outline: 0;
+  opacity: 1;
+  border: 0;
+}
+
+.navbar-brand {
+  width: 140px;
+  background: url(../ico/neufact_logo_x2.png) left center no-repeat;
+  background-size: 140px;
+  text-indent: -99999px;
+}
+
+.top-focus {
+  background-color: #3ab0e2 !important;
+}
+
+@media (max-width:767px) {
+  .navbar-brand {
+    background-size: 100px;
+    margin-left: 15px;
+  }
+
+}

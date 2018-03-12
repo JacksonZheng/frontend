@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% from "common.html" import title %}
+    {{title()}}
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../global/css/fonts-family.css">
+    <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../plugins/bootstrap-switch/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables/plugins/bootstrap/datatables.bootstrap.css">
+    <link rel="stylesheet" href="../../global/css/plugins.min.css">
+    <link rel="stylesheet" href="../../global/css/components.min.css">
+    <link rel="stylesheet" href="../../pages/css/topmenu.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../../global/img/favicon.ico">
+  </head>
+  <body>
+    <!-- Top menu -->
+    {% from "common.html" import topmenu %}
+    {{topmenu("/?")}}
+    <!-- Top content -->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet light bordered">
+          <div class="portlet-title">
+            <div class="caption font-dark">
+              <i class="icon-settings font-dark"></i>
+              <span class="caption-subject bold uppercase"> 账户管理</span>
+            </div>
+            <div class="actions">
+              <button type="button" class="btn btn-circle btn-default" onclick="{location.href='/logout'}">退出</button>
+            </div>
+          </div>
+          <div class="portlet-body">
+            <div class="table-toolbar">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="btn-group">
+                    <button id="sample_editable_1_new" class="btn sbold green"> Add New
+                    <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="btn-group pull-right">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+                    <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                      <li>
+                        <a href="javascript:;">
+                        <i class="fa fa-print"></i> Print </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                        <i class="fa fa-file-excel-o"></i> Export to Excel </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="table table-striped table-bordered table-hover order-column" id="sample_1">
+              <thead>
+                <tr>
+                  <th> 用户名 </th>
+                  <th> 昵称 </th>
+                  <th> Email </th>
+                  <th> 公司 </th>
+                  <th> 权限 </th>
+                  <th> 状态 </th>
+                  <th> edit </th>
+                  <th> delete </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in userlist %}
+                  <tr class="odd gradeX">
+                    <td>
+                      <span data="{{user.id}}"> {{user.username}} </span>
+                    </td>
+                    <td> {{user.realname}} </td>
+                    <td>
+                      <a href="mailto:{{user.mail}}">{{user.mail}}</a>
+                    </td>
+                    <td> {{user.company}} </td>
+                    <td>
+                      <span class="label label-sm label-success" data="{{user.privilege}}">{{user.privilege_doc|join(', ')}}</span>
+                    </td>
+                    <td>
+                      <span class="label label-sm label-success" data="{{user.state}}">{{user.state_doc|join(', ')}}</span>
+                    </td>
+                    <td>
+                      <a class="edit" href="javascript:;"> Edit </a>
+                    </td>
+                    <td>
+                      <a class="delete" href="javascript:;"> Delete </a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+      </div>
+    </div>
+    <div id='layer' class="portlet light bordered" style="display:none;">
+      <div class="portlet-body form">
+        <form role="form" method="post">
+          <div class="form-body">
+            <input id="userid" style="display: none;" type="text" value="0">
+            <div class="form-group">
+              <label class="control-label">用户名</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-user"></i>
+                </span>
+                <input id="username" type="email" class="form-control" placeholder="使用邮箱" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">邮箱</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <input id="mail" type="email" class="form-control" placeholder="邮箱" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">昵称</label>
+              <div class="input-group">
+                <input id="realname" type="text" class="form-control" placeholder="昵称" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">公司</label>
+              <div class="input-group">
+                <input id="company" type="text" class="form-control" placeholder="公司" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>权限</label>
+              <select id="privilege" class="form-control">
+                {% for privilege in privilege_doc %}
+                  <option value="{{privilege[0]}}">{{privilege[1]}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>状态</label>
+              <div class="mt-radio-inline">
+                <label class="mt-radio">
+                  <input type="radio" name="state" id="state0" value="0" checked> 正常
+                  <span></span>
+                </label>
+                <label class="mt-radio">
+                  <input type="radio" name="state" id="state1" value="1"> 禁用
+                  <span></span>
+                </label>
+                <label class="mt-radio mt-radio-disabled">
+                  <input type="radio" name="state" id="state2" value="2" disabled> 已删除
+                  <span></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn blue">确定</button>
+            <button type="button" class="btn default">取消</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="../../global/plugins/common-js/jquery.min.js"></script>
+    <script src="../../global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../global/plugins/common-js/jquery.backstretch.min.js"></script>
+    <script src="../../global/plugins/common-js/js.cookie.min.js"></script>
+    <script src="../../global/plugins/common-js/jquery.blockui.min.js"></script>
+    <script src="../../global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../global/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="../../global/plugins/datatables/datatables.min.js"></script>
+    <script src="../../global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"></script>
+    <script src="../../global/plugins/layer/layer.js"></script>
+    <script src="../../global/script/app.min.js"></script>
+    <script src="../../pages/script/account.js"></script>
+    
+    <!--[if lt IE 10]>
+    <script src="../static/login/js/placeholder.js"></script>
+    <![endif]-->
+  </body>
+</html>

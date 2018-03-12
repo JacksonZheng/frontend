@@ -1,0 +1,526 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+/* Padding below the footer and lighter body text */
+
+body {
+  background: #f8f8f8;
+  font-family: 'Roboto', "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #555;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #555;
+  line-height: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, a:hover, a:focus {
+  color: #42bfc2;
+  text-decoration: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 0px;
+}
+
+.carousel-back {
+  min-width: 2560px;
+  background-color: rgba(60, 60, 60, 0.8);
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  margin-left: 50%;
+  max-width: none;
+  height: 500px;
+  left: -960px;
+}
+
+.btn-primary {
+  background-color: #3ab0e2;
+  border-color: #3ab0e2;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.focus-box {
+  border: 10px solid #ececec;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.red,
+.green,
+.blue,
+.yellow {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.red:hover {
+  border: 10px solid #e96656;
+}
+
+.green:hover {
+  border: 10px solid #34d293;
+}
+
+.blue:hover {
+  border: 10px solid #3ab0e2;
+}
+
+.yellow:hover {
+  border: 10px solid #f7d861;
+}
+
+.package {
+  border-radius: 15px;
+  background: #FFFFFF;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+}
+
+.price {
+  border-radius: 15px 15px 0px 0px;
+  line-height: 120px;
+  height: 100px;
+  color: #FFF;
+  font-weight: 400;
+}
+
+.dark-bg {
+  background: #404040;
+}
+
+.price .price-meta {
+  line-height: normal;
+  text-transform: uppercase;
+  color: #9f9f9f;
+}
+
+.price h4 {
+  display: inline;
+  font-size: 40px;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.package ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px dotted #dadada;
+}
+
+/* TESTIMONIALS CONTENT
+-------------------------------------------------- */
+.medium-paragraph {
+  font-size: 18px;
+  line-height: 34px;
+}
+
+::-moz-selection {
+  background: #42bfc2;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #42bfc2;
+  color: #fff;
+  text-shadow: none;
+}
+
+/***** General style, all sections *****/
+.section-container {
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.section-container-image-bg,
+.section-container-image-bg h2,
+.section-container-image-bg h3 {
+  color: #fff;
+}
+
+.section-container-image-bg .divider-1 .line {
+  border-color: #fff;
+  opacity: 0.8;
+}
+
+.section-description {
+  margin-top: 60px;
+  padding-bottom: 10px;
+}
+
+.section-description p {
+  margin-top: 20px;
+  padding: 0 120px;
+}
+
+.section-container-image-bg .section-description p {
+  opacity: 0.8;
+}
+
+/***** Divider *****/
+.divider-1 {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.divider-1 .line {
+  width: 200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/***** Testimonials *****/
+.testimonials-container {
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+}
+
+.testimonial-list {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.testimonial-list .testimonial-image img {
+  max-width: 160px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.testimonial-list .testimonial-text {
+  margin-top: 30px;
+}
+
+.testimonial-list .testimonial-text p {
+  opacity: 0.8;
+}
+
+.testimonial-list .testimonial-text a {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+.testimonial-list .testimonial-text a:hover,
+.testimonial-list .testimonial-text a:focus {
+  color: #fff;
+  border: 0;
+}
+
+.testimonial-list .nav-tabs {
+  margin-top: 30px;
+  border: 0;
+}
+
+.testimonial-list .nav-tabs li {
+  float: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.testimonial-list .nav-tabs li a {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.testimonial-list .nav-tabs li a:hover {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonial-list .nav-tabs li.active a,
+.testimonial-list .nav-tabs li.active a:focus {
+  background: #42bfc2;
+  border: 0;
+}
+
+/* Featurettes
+------------------------- */
+.features {
+  padding-bottom: 30px;
+}
+
+.featurette-divider {
+  margin: 70px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/*----------------------------------------
+ **   SECTION:  CONTACT US             -----
+-----------------------------------------*/
+.contact-us {
+  padding-top: 25px;
+  padding-bottom: 65px;
+}
+
+.contact-us .input-box,
+textarea {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.contact-us .custom-button {
+  float: right;
+}
+
+.success,
+.error {
+  display: none;
+}
+
+.input-box {
+  border: 0;
+  width: 274px;
+  text-align: left;
+  text-transform: none;
+  padding: 9px;
+  min-height: 46px;
+  padding-left: 15px;
+  display: inline-block;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.textarea-box {
+  border: 0;
+  text-align: left;
+  text-transform: none;
+  padding: 9px;
+  min-height: 250px;
+  padding-left: 15px;
+  display: inline-block;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+.section-header h2 {
+  padding-bottom: 10px;
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h6 {
+  font-size: 16px;
+}
+
+section#contact {
+  background-image: url(../images/backgrounds/blurry.jpg);
+  background-attachment: fixed;
+}
+
+/* ----------------------------------------*/
+
+/*   SECTION:  FOOTER                        */
+
+/* ----------------------------------------*/
+
+footer {
+  background: #272727;
+}
+
+.company-details {
+  color: #939393;
+  padding-top: 67px;
+  padding-bottom: 67px;
+}
+
+.company-details .icon-top {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  padding-top: 60px;
+  padding-bottom: 68px;
+  background: #171717;
+}
+
+.social li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.social li a {
+  color: #939393;
+  font-size: 18px;
+}
+
+.social li a:hover {
+  color: #e96656;
+}
+
+.social a {
+  color: #939393;
+}
+
+.social a:hover {
+  color: #e96656;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width:415px) {
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+
+  .section-description p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .testimonial-list {
+    margin-top: 0px;
+  }
+
+  .featurette-divider {
+    margin: 20px 0; /* Space out the Bootstrap <hr> more */
+  }
+
+  .contact-us {
+    padding-bottom: 45px;
+  }
+
+  .section-header {
+    padding-bottom: 35px;
+  }
+
+}
+
+@media (min-width:768px) {
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 0;
+  }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 40px;
+  }
+
+  .section-description p {
+    padding: 0;
+  }
+
+}
+
+@media (min-width:992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+
+}
